@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <title>Amiens-Tech</title>
+</head>
+<body>
+    <!-- HEADER START -->
+    <header>
+        <!--Version Mobile START-->
+        <nav class="navbar navbar-expand-lg">
+            <!-- NAV START -->
+            <div class="d-lg-none container-fluid">
+                <img class="logo rounded-circle" src="./assets/img/logo.png" title="Logo d'Amiens-Tech" alt="Logo d'Amiens-Tech" id="logo" width="20%" height="80%">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="./index.html" id="index">Accueil</a>
+                     <a class="nav-link" href="" id="reservation" data-bs-toggle="modal" data-bs-target="#clickconstruction">Réservation</a>
+                    <a class="nav-link" href="" id="blog" data-bs-toggle="modal" data-bs-target="#clickconstruction">Blog</a>
+                    <a class="nav-link" href="" id="contact" data-bs-toggle="modal" data-bs-target="#clickconstruction">Contact</a>
+                </div>
+            <!-- Button Connection START -->
+                    <div class="connection">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#clickconnection">Se Connecter</button>
+                    </div>
+            <!-- Button Connection END -->
+                </div>
+            </div>
+            <!--Version Mobile END-->
+            <!--Version desktop START-->
+            <div class="d-none d-lg-block navigation container-fluid">
+                <div class="row ">
+                    <div class="col-1 logo ps-4 my-auto">
+                        <img class="rounded-circle" src="./assets/img/logo.png" title="Logo d'Amiens-Tech" alt="Logo d'Amiens-Tech" id="logo"  width="150%" height="120%">
+                    </div>
+                    <div class="col-8  my-auto d-flex justify-content-evenly">
+                    <a href="./index.html" id="index">Accueil</a>
+                    <a href="" id="reservation" data-bs-toggle="modal" data-bs-target="#clickconstruction">Réservation </a>
+                    <a href="" id="blog" data-bs-toggle="modal" data-bs-target="#clickconstruction">Blog</a>
+                    <a href="" id="contact" data-bs-toggle="modal" data-bs-target="#clickconstruction">Contact</a>
+                    </div>
+                    <div class="col-3 my-auto d-flex justify-content-evenly">
+                        <a class="my-auto" href="" id="inscription" data-bs-toggle="modal" data-bs-target="#clickconstruction">S'inscrire</a>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#clickconnection">Se Connecter</button>
+                    </div>
+                </div>
+            </div>
+            <!--Version desktop END-->
+            <!-- Modal Window construction START-->
+            <div class="modal fade" id="clickconstruction" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">/!\ En construction</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="./assets/img/troll604.jpg" alt="" width="100" height="100">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Modal Window construction END-->
+            <!-- Modal Button Connection START -->
+            <div class="modal fade text-dark" id="clickconnection" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Connexion</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="fs-5 text-center">Déjà un compte ? : </h2>
+                        <form class="formlogin text-center" method="post">
+                            <div>
+                                <label for="mail"></label>
+                                <input type="email" id="mail" name="user_mail" placeholder="Email">
+                            </div>
+                            <div>
+                                <label for="mail"></label>
+                                <input type="text" id="password" name="user_password" placeholder="Mot de passe">
+                            </div>
+                            <div>
+                                <input class="connectionlogin text-light rounded bg-danger" id="connectButton" type="submit" value="Connecter">
+                            </div>
+                        </form>
+                        <hr>
+                        <h2 class="fs-5 text-center">Inscription : </h2>
+                        <form class="forminscription text-center" method="post">
+                            <div>
+                                <label for="firstname"></label>
+                                <input type="text" id="firstname" name="user_name" placeholder="Nom">
+                            </div>
+                            <div>
+                                <label for="lastname"></label>
+                                <input type="text" id="lastname" name="user_lastname" placeholder="Prénom">
+                            </div>
+                            <div>
+                                <label for="mail"></label>
+                                <input type="email" id="mail" name="user_mail" placeholder="Email">
+                            </div>
+                             <div>
+                                 <label for="password"></label>
+                                <input type="text" id="password" name="user_password" placeholder="Mot de passe">
+                            </div>
+                               <div>
+                                <input class="connectionlogin text-light rounded bg-danger" id="connectButton" type="submit" value="Connecter">
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            <!-- Modal Button Connection END -->
+            </div>
+        </nav>
+        <!-- NAV END -->
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main>
+        <!-- BODY1 START-->
+        <div class="container">
+            <h1 class="title text-center my-3 fw-bold">BOURSE HIGH TECH</h1>
+            <div class="row">
+                <!--LOGO START-->
+                <div class="col-12 col-lg-3 my-3">
+                    <div class="logo d-flex flex-row flex-lg-column text-center">
+                        <div>
+                            <img class="logoAmiens ms-sm-5 mb-lg-5" src="./assets/img/amiens.png" alt="logoamiens" width="52%">
+                        </div>
+                        <div>
+                            <img class="logoManu ms-lg-5" src="./assets/img/logo-la-manu-signature.png" alt="logolamanu" width="50%" >
+                        </div>
+                    </div>
+                </div>
+                <!--LOGO END-->
+                <!--TEXT START-->
+                <div class="col-12 col-lg-9 mt-3">
+                    <div class="textpresentation">
+                        <p class="mb-lg-4">La ville d’Amiens Métropole vous invite à la mise en place d’une Bourse High Tech. Le site Amiens Tech met à votre disposition 
+                            différents outils technologiques tels que des téléphones, imprimantes, consoles, gaming gear, etc...
+                        </p>
+                        <p class="p-0">Cet événement est organisé par les élèves de La Manu Novei Formation et aura lieu sur le site du Campus.
+                        Des mesures sanitaires et de sécurité seront mises en place afin de vous accueillir dans les meilleures conditions.
+                        </p>
+                    </div>
+                </div>
+                <!--TEXT END-->
+            </div>
+        </div>
+        <!-- BODY1 END-->
+
+        <!-- BODY2 START -->
+        <div class="containerProduct">
+            <div class="container-fluid text-center">
+                <div class="row pt-3 pb-3">
+                    <div class="col-xl-8">
+                        <!-- Carrousel -->
+                        <div class="reservation">
+                            <h2 class="mb-3">Exemple de produits</h2>
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img src="./assets/img/ps5.jpg" class="img-fluid rounded" alt="ps5">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="./assets/img/imprimante.jpg" class="img-fluid rounded" alt="imprimante">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="./assets/img/pcportable.jpg" class="img-fluid rounded" alt="pc portable">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="./assets/img/tablette.jpg" class="img-fluid rounded" alt="pc portable">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="./assets/img/telephone.jpg" class="img-fluid rounded" alt="pc portable">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- Form -->
+                    <div class="col-xl-3">
+                        <div class="booking">
+                            <h2 class="my-3">Réservation</h2>
+                            <p class="text-center">Réservez votre emplacement de vente</p>
+                            <form method="post" class="offset-1">
+                                    <div class="col-11 col-sm-11">
+                                        <input type="text" class="form-control" placeholder="Nom" aria-label="Nom">
+                                    </div>
+                                        <div class="col-11 col-sm-11 pt-3">
+                                        <input type="text" class="form-control" placeholder="Prénom" aria-label="Prénom">
+                                        </div>
+                                    <div class="col-11 col-sm-11 pt-3">
+                                        <input type="text" class="form-control" placeholder="Téléphone" aria-label="Téléphone">
+                                    </div>
+                                    </div>
+                                <div class="col-md-12 col-xl-12 pt-3">
+                                    <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#clickconstruction">Réserver</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BODY2 END -->
+
+         <!-- BODY 3 -->
+         <div class="container-fluid my-3 mx-0 p-0">
+            <div class="row text-center mx-0">
+                 <div class="imgCampus col-lg-4 order-lg-3 my-auto p-0 pe-lg-5 mx-0">
+                    <img class="campus mw-100" src="./assets/img/formation_professionnelle_campus_amiens.jpg" alt="campus">
+                </div>
+                <div class="col-lg-4 order-lg-2 my-lg-auto my-3 text-center mx-0">
+                    <h2 class="placeDate text-center">Lieu et date</h2>
+                    <p class="placeDateP text-center">RDV sur le parking de La Manu :</p>
+                    <p class="placeDateP text-center">70 Rue des Jacobins, 80000 Amiens</p>
+                    <p class="placeDateP text-center">Le 27 octobre 2022 à partir de 9h00</p>
+                </div>
+                <div class="col-lg-4 order-lg-1 p-0 mx-0">
+                    <iframe class="map ps-lg-5 my-auto mx-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.4684054742497!2d2.2992816511538825!3d49.89000883536771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e78446501e03cb%3A0xd90c13e3b01c0596!2s70%20Rue%20des%20Jacobins%2C%2080000%20Amiens!5e0!3m2!1sfr!2sfr!4v1666705752423!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- MAIN END -->
+
+     <!-- FOOTER START -->
+     <footer class="container-fluid">
+        <div class="row flex-row flex-lg-row-reverse">
+
+            <!-- Column social network -->
+            <div class="my-4 col-lg-3 my-lg-auto">
+                <div class="p-0">
+                    <div class="row mx-auto flex-lg-col">
+                        <div class="col text-center"><img src="./assets/img/facebook.png" alt="Logo Facebook" width="50%"><a href=""></a></div>
+                        <div class="col text-center"><img src="./assets/img/twitter.png" alt="Logo Twitter" width="50%"><a href=""></a></div>
+                        <div class="col text-center"><img src="./assets/img/instagram.png" alt="Logo Instagram" width="50%"><a href=""></a></div>
+                    </div>
+                </div>
+            </div>  
+
+            <!-- Accordion mobile view, hidden on desktop view -->
+            <div class="d-lg-none accordion col-8 offset-2 mb-4 text-center" id="accordionApropos">
+                <!-- Accordion first button -->
+                <div class="accordion-item bgAccordion ">
+                    <h2 class="accordion-header " id="headingOne">
+                        <button class="accordion-button collapsed  textAccordion fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        À propos
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionApropos">
+                        <div class="accordion-body multilink list-group-flush p-0">
+                            <ul class="multiLink p-0 m-0">
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="">Qui sommes nous</a></li>
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="http://www.118218.fr" target="_blank">Nous contacter</a></li>
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="">Questions fréquentes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion second button -->
+                <div class="accordion-item bgAccordion">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed textAccordion fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Sites partenaires
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionApropos">
+                        <div class="accordion-body">
+                            <div class="multiLink list-group-flush">
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="https://www.amiens.fr/" target="_blank">Mairie d'Amiens</a></li>
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="https://lamanu.fr/" target="_blank">La Manu</a></li>
+                            </div>                   
+                    </div>
+                    </div>
+                </div>
+                <!-- Accordion third button -->
+                <div class="accordion-item bgAccordion">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed textAccordion fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Informations légales
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionApropos">
+                        <div class="accordion-body">
+                            <div class="multiLink list-group-flush">
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="https://www.amazon.fr/gp/help/customer/display.html?nodeId=201909000&ref_=footer_cou" target="_blank">Conditions de vente</a></li>
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="">Mentions légales</a></li>
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="">Données personnelles</a></li>
+                                <li class="list-group-item"><a class="text-white text-decoration-none" href="">Utilisation des cookies</a></li>
+                            </div>                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop view, hidden on mobile view -->
+            <div class="d-none d-lg-block col-lg-9">
+                
+                <div class="row text-white mt-3">
+                    <div class="col-lg-4">
+                        <ul class="text-start offset-1 ">À propos
+                            <div class="multiLink text-start mt-2">
+                                <li class="list-group-item"><a href="" class="text-white text-decoration-none">Qui sommes nous</a></li>
+                                <li class="list-group-item"><a href="http://www.118218.fr" class="text-white text-decoration-none" target="_blank">Nous contacter</a></li>
+                                <li class="list-group-item"><a href="" class="text-white text-decoration-none">Questions fréquentes</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="text-start offset-1">Informations légales
+                            <div class="multiLink text-start mt-2">
+                                <li class="list-group-item"><a href="https://www.amazon.fr/gp/help/customer/display.html?nodeId=201909000&ref_=footer_cou" target="_blank" class="text-white text-decoration-none">Conditions de vente</a></li>
+                                <li class="list-group-item"><a href="" class="text-white text-decoration-none">Mentions légales</a></li>
+                                <li class="list-group-item"><a href="" class="text-white text-decoration-none">Données personnelles</a></li>
+                                <li class="list-group-item"><a href="" class="text-white text-decoration-none">Utilisation des cookies</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="text-start offset-1">Sites partenaire
+                            <div class="multiLink text-start mt-2">
+                                <li class="list-group-item"><a href="https://www.amiens.fr/" class="text-white text-decoration-none" target="_blank">Mairie d'Amiens</a></li>
+                                <li class="list-group-item"><a href="https://lamanu.fr/" class="text-white text-decoration-none" target="_blank">La Manu</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER START -->
+
+    <!-- <script type="text/javascript" src="./assets/js/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./public/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
